@@ -1,0 +1,41 @@
+
+
+.header {
+   display: block;
+   font-size: 56px;
+   margin: auto;
+   margin-top: 100px;
+   text-align: center;
+
+}
+
+.subHeader {
+    display: block;
+    font-size: 26px;
+    margin: auto;
+    text-align: center;
+}
+
+.firstnameInput {
+    width:400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.lastnameInput {
+    width:400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.usernameInput {
+    width: 400px;
+
+}
+
+.submitButton {
+    margin-top: 50px;
+}
+
+.subLink {
+    margin-top: 30px;
+}

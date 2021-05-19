@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Subscriber Sign-Up</title>
+    <link rel="stylesheet" href="AllSubscribers.css">
+</head>
+
+
+<body>
+    <div class="header">
+        All Subscribers
+    </div>
+
+    <div class="indexLink">
+        <a href="/">Go back to sign up page</a>
+    </div>
+
+
+    <!--This search bar does nothing-->
+
+    <div class="row search" align="center">
+        <div class="col"></div>
+        <div class="col">
+            <div class="input-group">
+                    <input class="form-control" id="txtSearch" type="text" name="keyword">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+
+
+    <div class="row table">
+        <div class="col"></div>
+        <div class="col-lg-auto">
+            <table class="table table-responsive table-bordered table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th> User ID</th>
+                        <th>User Name</th>
+                        <th> First Name</th>
+                        <th>Last Name</th>
+                        <th>Sign-Up Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="subscriber : ${subscribers}">
+                        <td><span th:text="${subscriber.id}">User ID</span></td>
+                        <td><span th:text="${subscriber.userName}">User Name</span></td>
+                        <td><span th:text="${subscriber.firstName}">First Name</span></td>
+                        <td><span th:text="${subscriber.lastName}">Last Name</span></td>
+                        <td><span th:text="${subscriber.signedUp}">Sign-Up Date</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col"></div>
+    </div>
+
+
+
+
+
+</body>
+</html>
